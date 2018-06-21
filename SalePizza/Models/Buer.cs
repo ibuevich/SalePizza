@@ -13,5 +13,7 @@ namespace SalePizza.Models
         [Required]
         [MaxLength(60)]
         public string Name { get; set; }
+
+        public Purchase Purchase { get; set; }
     }
 }

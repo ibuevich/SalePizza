@@ -28,5 +28,11 @@ namespace SalePizza.Models
         public int BuerId { get; set; }
 
         public Buer Buer { get; set; }
+
+        public ICollection<Pizza> Pizzas { get; set; }
+        public Purchase()
+        {
+            Pizzas = new List<Pizza>();
+        }
     }
 }

@@ -151,9 +151,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Content\App_Start\BundleConfig.cs" />
+    <Compile Include="Content\App_Start\FilterConfig.cs" />
+    <Compile Include="Content\App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,6 +166,7 @@
     <Compile Include="Models\Buer.cs" />
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\PizzaContext.cs" />
+    <Compile Include="Models\PizzaDbInitializer.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
