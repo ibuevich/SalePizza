@@ -163,7 +163,7 @@
       <DependentUpon>201806201432494_AddPizzaMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Buer.cs" />
+    <Compile Include="Models\Buyer.cs" />
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\PizzaContext.cs" />
     <Compile Include="Models\PizzaDbInitializer.cs" />
@@ -195,7 +195,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

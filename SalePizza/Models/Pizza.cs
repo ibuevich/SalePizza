@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SalePizza.Models
 {
@@ -13,7 +9,7 @@ namespace SalePizza.Models
         public double Diameter { get; set; }
         [Required] public string Composition { get; set; }
 
-        public Purchase Purchase { get; set; }
+        //public Purchase Purchase { get; set; }
     }
 
 }

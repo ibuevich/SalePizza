@@ -1,9 +1,6 @@
-﻿using System;
+﻿using SalePizza.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using SalePizza.Models;
 
 namespace SalePizza.Controllers
 {
@@ -17,7 +14,7 @@ namespace SalePizza.Controllers
         {
             // получаем из бд все объекты Pizza
             IEnumerable<Pizza> pizzas = db.Pizzas;
-            // передаем все объекты в динамическое свойство Books в ViewBag
+            // передаем все объекты в динамическое свойство в ViewBag
             ViewBag.Books = pizzas;
             // возвращаем представление
             return View();

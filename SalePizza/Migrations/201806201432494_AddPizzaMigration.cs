@@ -1,8 +1,7 @@
 namespace SalePizza.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class AddPizzaMigration : DbMigration
     {
         public override void Up()
@@ -42,7 +41,6 @@ namespace SalePizza.Migrations
                 .ForeignKey("dbo.Pizzas", t => t.PizzaId, cascadeDelete: true)
                 .Index(t => t.PizzaId)
                 .Index(t => t.BuerId);
-            
         }
         
         public override void Down()
