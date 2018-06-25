@@ -14,9 +14,6 @@ namespace SalePizza
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new PizzaDbInitializer());
-
-
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

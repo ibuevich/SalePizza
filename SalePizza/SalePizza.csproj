@@ -151,9 +151,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\App_Start\BundleConfig.cs" />
-    <Compile Include="Content\App_Start\FilterConfig.cs" />
-    <Compile Include="Content\App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -161,6 +161,30 @@
     <Compile Include="Migrations\201806201432494_AddPizzaMigration.cs" />
     <Compile Include="Migrations\201806201432494_AddPizzaMigration.Designer.cs">
       <DependentUpon>201806201432494_AddPizzaMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806250622041_AddPizzaMigration2.cs" />
+    <Compile Include="Migrations\201806250622041_AddPizzaMigration2.Designer.cs">
+      <DependentUpon>201806250622041_AddPizzaMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806250622224_AddPizzaMigration4.cs" />
+    <Compile Include="Migrations\201806250622224_AddPizzaMigration4.Designer.cs">
+      <DependentUpon>201806250622224_AddPizzaMigration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806250627593_AddPizzaMigration5.cs" />
+    <Compile Include="Migrations\201806250627593_AddPizzaMigration5.Designer.cs">
+      <DependentUpon>201806250627593_AddPizzaMigration5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806250636342_AddPizzaMigration6.cs" />
+    <Compile Include="Migrations\201806250636342_AddPizzaMigration6.Designer.cs">
+      <DependentUpon>201806250636342_AddPizzaMigration6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806250657207_AddPizzaMigration3.cs" />
+    <Compile Include="Migrations\201806250657207_AddPizzaMigration3.Designer.cs">
+      <DependentUpon>201806250657207_AddPizzaMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806250705557_AddPizzaMigration7.cs" />
+    <Compile Include="Migrations\201806250705557_AddPizzaMigration7.Designer.cs">
+      <DependentUpon>201806250705557_AddPizzaMigration7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Buyer.cs" />
@@ -211,6 +235,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Buy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -231,6 +256,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806201432494_AddPizzaMigration.resx">
       <DependentUpon>201806201432494_AddPizzaMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250622041_AddPizzaMigration2.resx">
+      <DependentUpon>201806250622041_AddPizzaMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250622224_AddPizzaMigration4.resx">
+      <DependentUpon>201806250622224_AddPizzaMigration4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250627593_AddPizzaMigration5.resx">
+      <DependentUpon>201806250627593_AddPizzaMigration5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250636342_AddPizzaMigration6.resx">
+      <DependentUpon>201806250636342_AddPizzaMigration6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250657207_AddPizzaMigration3.resx">
+      <DependentUpon>201806250657207_AddPizzaMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250705557_AddPizzaMigration7.resx">
+      <DependentUpon>201806250705557_AddPizzaMigration7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

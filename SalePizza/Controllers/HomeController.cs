@@ -1,4 +1,5 @@
-﻿using SalePizza.Models;
+﻿using System;
+using SalePizza.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -15,10 +16,27 @@ namespace SalePizza.Controllers
             // получаем из бд все объекты Pizza
             IEnumerable<Pizza> pizzas = db.Pizzas;
             // передаем все объекты в динамическое свойство в ViewBag
-            ViewBag.Books = pizzas;
+            ViewBag.Pizzas = pizzas;
             // возвращаем представление
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Buy(int id)
+        {
+            ViewBag.PizzaId = id;
+            return View();
+        }
+
+        //[HttpPost]
+        //public string Buy(Purchase purchase, Buyer buyer)
+        //{
+        //    purchase.Date = DateTime.Now;
+        //    db.Buyers.Add()
+        //    db.Purchases.Add(purchase); //добавление в бд заказа
+        //    db.SaveChanges();
+        //    return "Спасибо," + purchase.Buyer + ", за покупку!";
+        //}
 
         public ActionResult About()
         {
