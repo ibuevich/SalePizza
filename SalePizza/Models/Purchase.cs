@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SalePizza.Models
 {
@@ -14,15 +12,11 @@ namespace SalePizza.Models
 
         public double Price { get; set; }
 
+        public int BuyerId { get; set; }
+        public Buyer Buyer { get; set; }
 
         public int PizzaId { get; set; }
-
         public Pizza Pizza { get; set; }
-
-
-        public int BuyerId { get; set; }
-
-        public Buyer Buyer { get; set; }
 
         public ICollection<Pizza> Pizzas { get; set; }
 
@@ -30,5 +24,6 @@ namespace SalePizza.Models
         {
             Pizzas = new List<Pizza>();
         }
+
     }
 }
