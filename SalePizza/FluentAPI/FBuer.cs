@@ -11,7 +11,12 @@ namespace SalePizza.FluentAPI
             HasKey(p => p.Id);
 
             Property(p => p.Name)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(50);
+
+            Property(p => p.Adress)
+                .IsRequired()
+                .HasMaxLength(50);
 
             Property(p => p.PurchaseId)
                 .IsOptional();

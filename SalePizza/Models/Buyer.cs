@@ -8,6 +8,7 @@ namespace SalePizza.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
+        public string Adress { get; set; }
 
         public int PurchaseId { get; set; }
         public Purchase Purchase { get; set; }

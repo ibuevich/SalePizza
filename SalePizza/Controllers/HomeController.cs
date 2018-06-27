@@ -1,5 +1,4 @@
-﻿using System;
-using SalePizza.Models;
+﻿using SalePizza.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -28,10 +27,11 @@ namespace SalePizza.Controllers
             return View();
         }
 
-        //[HttpPost]
+        //[HttpPost] //добавление заказчика и самой покупки.
         //public string Buy(Purchase purchase, Buyer buyer)
         //{
         //    purchase.Date = DateTime.Now;
+
         //    db.Buyers.Add()
         //    db.Purchases.Add(purchase); //добавление в бд заказа
         //    db.SaveChanges();
