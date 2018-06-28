@@ -3680,13 +3680,13 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 }
 
 
-/*[ Gradient ]
+/*[ Gradient ] searchhear
 -----------------------------------------------------------
 */
 .gradient1 {
   background: -webkit-linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0));
   background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0)); 
-  background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0));
+  background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0)); 
   background: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0));
 }
 
@@ -3694,7 +3694,8 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 /*[ Background pattern ]
 -----------------------------------------------------------
 */
-.bg1-pattern {
+.
+-pattern {
 	background-image: url(../images/icons/pattern1.png);
   	background-repeat: repeat;
 }

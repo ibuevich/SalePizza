@@ -489,7 +489,7 @@ input[type="date" i] {
   top: 0;
   left: 0;
   z-index: 100;
-  border-top: 5px solid #ec1d25;
+
 }
 
 .wrap_header {
@@ -512,6 +512,12 @@ input[type="date" i] {
   background: rgba(255,255,255,0.9);
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
+
+header {
+    margin-bottom: 150px;
+}
+
+
 
 /*[ Logo ]
 -----------------------------------------------------------
@@ -574,11 +580,12 @@ input[type="date" i] {
 
 .main_menu > li > a {
   font-family: Montserrat;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 14px;
   text-transform: uppercase;
   color: white;
   padding: 15px;
+
 }
 
 .header-fixed .main_menu > li > a {
