@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace SalePizza
 {
@@ -8,6 +7,19 @@ namespace SalePizza
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new StyleBundle("~/bundles/myscripts").Include( 
+                "~/Scripts/myscripts/css/*.css",
+                "~/fonts/font-awesome-4.7.0/css/font-awesome.min.css",
+                "~/fonts/themify/themify-icons.css",
+                "~/Scripts/myscripts/vendor/bootstrap/css/bootstrap.min.css",
+                "~/Scripts/myscripts/vendor/animate/animate.css",
+                "~/Scripts/myscripts/vendor/animsition/css/animsition.min.css",
+                "~/Scripts/myscripts/vendor/select2/select2.min.css",
+                "~/Scripts/myscripts/vendor/slick/slick.css",
+                "~/Scripts/myscripts/vendor/lightbox2/css/lightbox.min.css",
+                "~/Scripts/myscripts/vendor/daterangepicker/daterangepicker.css",
+                "~/Scripts/myscripts/vendor/css-hamburgers/hamburgers.min.css"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
