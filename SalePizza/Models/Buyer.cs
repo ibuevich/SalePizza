@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace SalePizza.Models
 {
@@ -7,17 +9,15 @@ namespace SalePizza.Models
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
         public string Adress { get; set; }
 
+        //public string IdApplicationUser { get; set; }
+
+        //public ApplicationUser ApplicationUser { get; set; }
+
+
         public int PurchaseId { get; set; }
+
         public Purchase Purchase { get; set; }
-
-        //public virtual ICollection<Purchase> Purchases { get; set; }
-
-        //public Buyer()
-        //{
-        //    Purchases = new List<Purchase>();
-        //}
     }
 }

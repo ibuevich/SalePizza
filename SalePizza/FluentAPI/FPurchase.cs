@@ -19,7 +19,6 @@ namespace SalePizza.FluentAPI
             HasRequired(s => s.Pizza)
                 .WithOptional(s => s.Purchase)
                 .WillCascadeOnDelete(false);
-
                 //.WithMany(d => d.Purchases)
                 //.HasForeignKey(s => s.PizzaId)
                 //.WillCascadeOnDelete(false);

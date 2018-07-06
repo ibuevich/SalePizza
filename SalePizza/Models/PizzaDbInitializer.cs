@@ -16,7 +16,7 @@ namespace SalePizza.Models
             db.Pizzas.Add(new Pizza { Name = "Пицца Маргарита", Composition = "помидоры, базилик, сыр Моцарелла.", Diameter = 32.0f });
             db.Pizzas.Add(new Pizza { Name = "Пицца Вегетарианская", Composition = "соус для пиццы,помидоры, перец, оливки. лук, шампиньоны, мар. огурчики, сыр Моцарелла.", Diameter = 40.0f });
             db.Pizzas.Add(new Pizza { Name = "Пицца Арома", Composition = "соус чесночный, сыр Моцарелла, перец Халапеньо, ветчина, охотничьи колбаски, шампиньоны, кукуруза, маслины.", Diameter = 37.0f });
-            db.Buyers.Add(new Buyer { Name = "Илья", Adress = "ул. Вологина 280-35"});
+            //db.Buyers.Add(new Buyer { Name = "Илья", Adress = "ул. Вологина 280-35"});
             //db.Purchases.Add(new Purchase { Date = new DateTime(2018, 7, 20), Price = 7.8f} );
 
             db.Pizzas.AddRange(defaultStandards);
