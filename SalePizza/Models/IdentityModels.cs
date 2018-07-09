@@ -23,6 +23,8 @@ namespace SalePizza.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Buyer> Buyers { get; set; } // мне связь с баером надо...
+
         public ApplicationDbContext()
             : base("DbConnection", throwIfV1Schema: false)
         {
