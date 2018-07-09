@@ -189,37 +189,22 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="FluentAPI\FBuyer.cs" />
+    <Compile Include="FluentAPI\FApplicationUser.cs" />
+    <Compile Include="FluentAPI\FCart.cs" />
     <Compile Include="FluentAPI\FPizza.cs" />
     <Compile Include="FluentAPI\FPurchase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806261226076_NewRelations_FluentAPIOut_Repair.cs" />
-    <Compile Include="Migrations\201806261226076_NewRelations_FluentAPIOut_Repair.Designer.cs">
-      <DependentUpon>201806261226076_NewRelations_FluentAPIOut_Repair.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806261231257_NewRelations_FluentAPIOut_Repair_Last.cs" />
-    <Compile Include="Migrations\201806261231257_NewRelations_FluentAPIOut_Repair_Last.Designer.cs">
-      <DependentUpon>201806261231257_NewRelations_FluentAPIOut_Repair_Last.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806261319519_More_Pizza_Added_AdressToBuyers.cs" />
-    <Compile Include="Migrations\201806261319519_More_Pizza_Added_AdressToBuyers.Designer.cs">
-      <DependentUpon>201806261319519_More_Pizza_Added_AdressToBuyers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807052100273_Modify_models_to_correctly_Aut.cs" />
-    <Compile Include="Migrations\201807052100273_Modify_models_to_correctly_Aut.Designer.cs">
-      <DependentUpon>201807052100273_Modify_models_to_correctly_Aut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807060808404_Modify_models_to_correctly_Aut_Second.cs" />
-    <Compile Include="Migrations\201807060808404_Modify_models_to_correctly_Aut_Second.Designer.cs">
-      <DependentUpon>201807060808404_Modify_models_to_correctly_Aut_Second.cs</DependentUpon>
+    <Compile Include="Migrations\201807081015194_New_Models.cs" />
+    <Compile Include="Migrations\201807081015194_New_Models.Designer.cs">
+      <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Buyer.cs" />
+    <Compile Include="Models\AccountView\AccountViewModels.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\AccountView\ManageViewModels.cs" />
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\PizzaContext.cs" />
     <Compile Include="Models\PizzaDbInitializer.cs" />
@@ -2344,20 +2329,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806261226076_NewRelations_FluentAPIOut_Repair.resx">
-      <DependentUpon>201806261226076_NewRelations_FluentAPIOut_Repair.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806261231257_NewRelations_FluentAPIOut_Repair_Last.resx">
-      <DependentUpon>201806261231257_NewRelations_FluentAPIOut_Repair_Last.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806261319519_More_Pizza_Added_AdressToBuyers.resx">
-      <DependentUpon>201806261319519_More_Pizza_Added_AdressToBuyers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807052100273_Modify_models_to_correctly_Aut.resx">
-      <DependentUpon>201807052100273_Modify_models_to_correctly_Aut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807060808404_Modify_models_to_correctly_Aut_Second.resx">
-      <DependentUpon>201807060808404_Modify_models_to_correctly_Aut_Second.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807081015194_New_Models.resx">
+      <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
