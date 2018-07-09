@@ -14,7 +14,9 @@ namespace SalePizza.Models
         }
 
         public DbSet<Pizza> Pizzas { get; set; }
+
         public DbSet<Buyer> Buyers { get; set; }
+        
         public DbSet<Purchase> Purchases { get; set; }
 
         static PizzaContext()
@@ -26,7 +28,7 @@ namespace SalePizza.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Configurations.Add(new FBuer());
+            modelBuilder.Configurations.Add(new FBuyer());
             modelBuilder.Configurations.Add(new FPizza());
             modelBuilder.Configurations.Add(new FPurchase());
         }

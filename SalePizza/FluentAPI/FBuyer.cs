@@ -3,16 +3,19 @@ using SalePizza.Models;
 
 namespace SalePizza.FluentAPI
 {
-    public class FBuer : EntityTypeConfiguration<Buyer>
+    public class FBuyer : EntityTypeConfiguration<Buyer>
     {
-        internal FBuer()
+        internal FBuyer()
         {
             // использование Fluent API для модели Buyer
             HasKey(p => p.Id);
 
-            Property(p => p.Name)
-                .IsRequired()
-                .HasMaxLength(50);
+            //Property(p => p.Age)
+            //    .IsRequired();
+
+            //Property(p => p.Name)
+            //    .IsRequired()
+            //    .HasMaxLength(50);
 
             Property(p => p.Adress)
                 .IsRequired()
