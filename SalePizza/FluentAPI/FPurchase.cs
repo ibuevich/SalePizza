@@ -10,25 +10,20 @@ namespace SalePizza.FluentAPI
             // использование Fluent API для модели Purchase
             HasKey(p => p.Id);
 
-            Property(p => p.Date)
+            Property(p => p.OrderDate)
                 .IsRequired();
+
             Property(p => p.Price)
                 .IsRequired();
 
-            //много пицц в одном заказе
-            HasRequired(s => s.Pizza)
-                .WithOptional(s => s.Purchase)
-                .WillCascadeOnDelete(false);
-                //.WithMany(d => d.Purchases)
-                //.HasForeignKey(s => s.PizzaId)
-                //.WillCascadeOnDelete(false);
+            //много пицц в заказе
+            HasMany(p => p.Pizzas)
+                .WithMany(c => c.Purchases);
 
-            //один покупатель в одном заказе
-            HasRequired(s => s.Buyer)
-                .WithOptional(d => d.Purchase)
-                .WillCascadeOnDelete(false);
-            //.WithRequiredPrincipal(d => d.Purchase)
-            //.WillCascadeOnDelete(false);
+            ////один Пользователь в одном заказе
+            //HasRequired(s => s.ApplicationUser)
+            //    .WithOptional(d => d.Purchase)
+            //    .WillCascadeOnDelete(false);
         }
     }
 }

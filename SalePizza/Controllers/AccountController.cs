@@ -151,7 +151,7 @@ namespace SalePizza.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Age = model.Age, Name = model.Name };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Birthday = model.Birthday, Name = model.Name, Surname = model.Surname, DefaultAddress = model.DefaultAddress};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

@@ -19,6 +19,7 @@
                 <th scope="col">Название пиццы</th>
                 <th scope="col">Диаметр</th>
                 <th scope="col">Состав</th>
+                <th scope="col">Цена</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -37,6 +38,9 @@
                 </td>
                 <td>
                     @b.Composition
+                </td>
+                <td>
+                    @b.Price
                 </td>
                 <td>
                     <a href="/Home/Buy/@b.Id">Заказать</a>

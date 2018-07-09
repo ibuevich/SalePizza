@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace SalePizza.Models
@@ -66,14 +67,23 @@ namespace SalePizza.Models
     {
 
         [Display(Name = "Ваше Имя:")]
-        [StringLength(25, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(25, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
         [Required]
         public string Name { get; set; }
 
-        [Display(Name = "Введите количество полных лет:")]
+        [Display(Name = "Ваша Фамилия:")]
+        [StringLength(25, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 4)]
         [Required]
-        [Range(16, 100, ErrorMessage = "Неудовлетворительный возраст")]
-        public int Age { get; set; }
+        public string Surname { get; set; }
+
+        [Display(Name = "Введите дату вашего рождения:")]
+        [Required]
+        public DateTime Birthday { get; set; }
+
+        [Display(Name = "Ваш Адрес:")]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 7)]
+        [Required]
+        public string DefaultAddress { get; set; }
 
         [Required]
         [EmailAddress]

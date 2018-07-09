@@ -18,10 +18,19 @@ namespace SalePizza.FluentAPI
             Property(p => p.Composition)
                  .IsOptional()
                  .HasMaxLength(150);
+
             Property(p => p.Diameter)
                  .IsOptional();
-            Property(p => p.PurchaseId)
-                .IsOptional();
+
+            Property(p => p.Price)
+                .IsRequired();
+                //найти что бы цена >0
+
+            HasMany(p => p.Carts)
+                .WithMany(c => c.Pizzas);
+
+            HasMany(p => p.Purchases)
+                .WithMany(c => c.Pizzas);
         }
     }
 }
