@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Пиццерия";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<h3 align="center">Моя корзина</h3>
+
+<h4 align="left">В корзине:</h4>
+
+<div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название пиццы</th>
+                <th scope="col">Диаметр</th>
+                <th scope="col">Состав</th>
+                <th scope="col">Цена</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{ int i = 1; }
+            @foreach (var b in ViewBag.Cart)
+            {
+                <tr>
+                    <th scope="row">@i</th>
+                    @foreach (var pizza in b.Pizzas)
+                    {
+                        <td>
+                            @pizza.Name
+                        </td>
+                        <td align="center">
+                            @pizza.Diameter
+                        </td>
+                        <td>
+                            @pizza.Composition
+                        </td>
+                        <td>
+                            @pizza.Price
+                        </td>
+                        i++;
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <div class="box_total_number">
+            ВСЕГО:
+            @foreach (var b in ViewBag.Cart)
+            {
+                <span class="value"> @b.AverageCost </span>
+            }
+            <span class="units"> руб </span>
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Оформить заказ" id="But_Purch" />
+        </div>
+    </div>
+</div>

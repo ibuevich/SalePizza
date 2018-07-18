@@ -1,20 +1,21 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SalePizza.Models;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
 
 namespace SalePizza.Controllers
 {
+
     [Authorize]
     public class AccountController : Controller
     {
+        // создаем контекст данных
+        PizzaContext db = new PizzaContext();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -151,7 +152,7 @@ namespace SalePizza.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Birthday = model.Birthday, Name = model.Name, Surname = model.Surname, DefaultAddress = model.DefaultAddress};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Birthday = model.Birthday, Name = model.Name, Surname = model.Surname, DefaultAddress = model.DefaultAddress, Cart = new Cart()};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -162,7 +163,7 @@ namespace SalePizza.Controllers
                         protocol: Request.Url.Scheme);
                     // отправка письма
                     await UserManager.SendEmailAsync(user.Id, "Подтверждение электронной почты",
-                        "Для завершения регистрации перейдите по ссылке:: <a href=\""
+                        "Для завершения регистрации перейдите по ссылке: <a href=\""
                         + callbackUrl + "\">завершить регистрацию</a>");
                     return View("DisplayEmail");
                 }

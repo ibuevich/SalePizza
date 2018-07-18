@@ -1,19 +1,20 @@
-﻿
+﻿@*добавление в корзину*@
 @{
-    ViewBag.Title = "Заказ пиццы";
+    ViewBag.Title = "Корзина";
 }
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Заказ</title>
+    <title>Моя корзина</title>
 </head>
 <body>
     <div>
-        <h3>Форма заказа пиццы</h3>
+        <h3>Моя корзина (сделать добавление в корзину)</h3>
         <form method="post" action="">
             <input type="hidden" value="@ViewBag.PizzaId" name="PizzaId" />
+
             <table>
                 <tr>
                     <td><p>Введите свое имя: </p></td>

@@ -22,6 +22,6 @@ namespace SalePizza.Models
         }
 
         [Range(0.0, Double.MaxValue)] //поискать в флюент
-        public int AverageCost { get; set; }
+        public double AverageCost { get; set; }
     }
 }

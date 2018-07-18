@@ -15,7 +15,6 @@ namespace SalePizza.Models
 
         public DbSet<IdentityUserRole> UserRoles { get; set; }
 
-
         //My custom DbSets
         public DbSet<Pizza> Pizzas { get; set; }
 
@@ -27,6 +26,10 @@ namespace SalePizza.Models
             : base("DbConnection")
         {
             Database.SetInitializer(new PizzaDbInitializer()); //<PizzaContext>(null);
+            if (!Database.Exists())
+            {
+                Database.Initialize(true);
+            }
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
         }
@@ -44,10 +47,7 @@ namespace SalePizza.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-
             modelBuilder.Configurations.Add(new FApplicationUser());
             modelBuilder.Configurations.Add(new FCart());
             modelBuilder.Configurations.Add(new FPizza());

@@ -1,4 +1,7 @@
-﻿@{
+﻿@using System.Data.Entity
+@using Microsoft.AspNet.Identity
+@using SalePizza.Models
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -26,28 +29,31 @@
 
         <tbody>
             @{ int i = 1; }
-        @foreach (var b in ViewBag.Pizzas)
-        {
-            <tr>
-                <th scope="row">@i</th>
-                <td>
-                    @b.Name
-                </td>
-                <td align="center">
-                    @b.Diameter
-                </td>
-                <td>
-                    @b.Composition
-                </td>
-                <td>
-                    @b.Price
-                </td>
-                <td>
-                    <a href="/Home/Buy/@b.Id">Заказать</a>
-                </td>
-            </tr>
-            i++;
-        }
+            @foreach (var b in ViewBag.Pizzas)
+            {
+                <tr>
+                    <th scope="row">@i</th>
+                    <td>
+                        @b.Name
+                    </td>
+                    <td align="center">
+                        @b.Diameter
+                    </td>
+                    <td>
+                        @b.Composition
+                    </td>
+                    <td>
+                        @b.Price
+                    </td>
+                    <td>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.ActionLink("В корзину", "AddToCart", new { pizzaid = @b.Id }, null)
+                        }
+                    </td>
+                </tr>
+                i++;
+            }
         </tbody>
     </table>
 </div>

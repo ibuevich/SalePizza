@@ -101,7 +101,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 body, html {
 	height: 100%;
 	font-family: Montserrat, sans-serif;
-  font-weight: 400;
+    font-weight: 400;
 }
 
 /* ------------------------------------ */
@@ -150,7 +150,7 @@ ul, li {
 /* ------------------------------------ */
 input {
 	outline: none;
-	border: none !important;
+	/*border: none !important;*/
 }
 
 textarea {
@@ -319,7 +319,7 @@ td.active {
   background-color: #ec1d25 !important;
 }
 
-input[type="date" i] {
+input[type="date"] {
   padding: 14px;
 }
 
@@ -482,6 +482,89 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 
+/*Êîğçèíà*/
+.ru .box_icon {
+    background: url(/images/icons/cart_icon.png) -25px top no-repeat;
+}
+
+.full .box_icon {
+    background-position: -49px top;
+}
+
+.cart_header {
+    cursor: pointer;
+    padding-top: 20px;
+    line-height: 16px;
+}
+
+.cart_box {
+    font-family: 'FuturaDemiCDemiC';
+    font-size: 16px;
+    color: #d51a1e;
+    position: relative;
+    vertical-align: top;
+    line-height: 1;
+    margin-left: 4px;
+    padding-left: 31px;
+}
+
+#counter span {
+    position: absolute;
+    z-index: 2;
+    font-style: normal;
+    vertical-align: middle;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+#counter {
+    font-family: Arial;
+    display: block;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    font-size: 9px;
+    left: 18px;
+    top: -15px;
+    color: #fff;
+    z-index: 0;
+    text-align: center;
+    line-height: 19px;
+}
+
+.box_icon {
+    background: url(/images/icons/icons8-ïèööà-50.png) -25px top no-repeat;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    display: inline-block;
+    width: 24px;
+    height: 30px;
+    margin-right: 7px;
+}
+.cart {
+    width: 238px;
+    height: 50px;
+    position: absolute;
+    z-index: 101;
+    padding: 0 8px 0;
+    top: 0;
+    right: 0;
+    background: #f1f5fc;
+    -webkit-border-radius: 0 0 9px 9px;
+    -moz-border-radius: 0 0 9px 9px;
+    border-radius: 0 0 9px 9px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
 .wrap-menu-header {
   position: absolute;
   width: 100%;
@@ -518,6 +601,16 @@ header {
 }
 
 
+/*Êîğîáêà*/
+
+.box_total_number {
+    font-family: 'FuturaDemiCDemiC';
+    color: #d12435;
+    text-transform: uppercase;
+    font-size: 22px;
+    vertical-align: baseline;
+    float: right;
+}
 
 /*[ Logo ]
 -----------------------------------------------------------
@@ -614,7 +707,6 @@ header {
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
-  -moz-transition: all 0.34; 
 }
 
 .main_menu > li > .sub_menu {

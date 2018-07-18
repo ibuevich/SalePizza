@@ -80,12 +80,19 @@
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -189,6 +196,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Filters\MyAuthAttribute.cs" />
+    <Compile Include="Filters\MyResultAttribute.cs" />
     <Compile Include="FluentAPI\FApplicationUser.cs" />
     <Compile Include="FluentAPI\FCart.cs" />
     <Compile Include="FluentAPI\FPizza.cs" />
@@ -199,6 +208,14 @@
     <Compile Include="Migrations\201807081015194_New_Models.cs" />
     <Compile Include="Migrations\201807081015194_New_Models.Designer.cs">
       <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807090930371_AverageCost_Cart_to_double.cs" />
+    <Compile Include="Migrations\201807090930371_AverageCost_Cart_to_double.Designer.cs">
+      <DependentUpon>201807090930371_AverageCost_Cart_to_double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807091457111_seed.cs" />
+    <Compile Include="Migrations\201807091457111_seed.Designer.cs">
+      <DependentUpon>201807091457111_seed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountView\AccountViewModels.cs" />
@@ -217,7 +234,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="images\icons\cart_icon.png" />
+    <Content Include="images\icons\icons8-пицца-50.png" />
+    <Content Include="images\icons\romb_for_cart.png" />
+    <Content Include="logs\Log.Info.current.txt" />
     <Content Include="Scripts\myscripts\css\main.css" />
+    <Content Include="Scripts\myscripts\css\myCSS.css" />
     <Content Include="Scripts\myscripts\css\util.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -382,6 +404,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2311,6 +2339,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2331,6 +2360,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807081015194_New_Models.resx">
       <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807090930371_AverageCost_Cart_to_double.resx">
+      <DependentUpon>201807090930371_AverageCost_Cart_to_double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807091457111_seed.resx">
+      <DependentUpon>201807091457111_seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

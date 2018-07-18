@@ -1,12 +1,16 @@
 ﻿using SalePizza.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using NLog.LayoutRenderers;
+using SalePizza.Filters;
 
 namespace SalePizza.Controllers
 {
     public class HomeController : Controller
     {
-
         // создаем контекст данных
         PizzaContext db = new PizzaContext();
 
@@ -27,16 +31,31 @@ namespace SalePizza.Controllers
             return View();
         }
 
-        //[HttpPost] //добавление заказчика и самой покупки.
-        //public string Buy(Purchase purchase, Buyer buyer)
-        //{
-        //    purchase.Date = DateTime.Now;
+        [HttpGet]
+        public ActionResult Cart()
+        {
+            string userid = User.Identity.GetUserId();
+            IEnumerable<Cart> carts = db.Carts.Where(p => p.ApplicationUser.Id == userid).Include(f => f.Pizzas).ToList();
+            ViewBag.Cart = carts;
+            return View();
+        }
 
-        //    db.Buyers.Add()
-        //    db.Purchases.Add(purchase); //добавление в бд заказа
-        //    db.SaveChanges();
-        //    return "Спасибо," + purchase.Buyer + ", за покупку!";
-        //}
+        [MyAuth]
+        [MyResult]
+        public void AddToCart(int pizzaid)
+        {
+            Pizza pizza = db.Pizzas.Find(pizzaid);
+            string userid = User.Identity.GetUserId();
+            if (pizza != null)
+            {
+                var carttochange =
+                    db.Carts.Where(p => p.ApplicationUser.Id == userid)
+                        .ToList(); //.FirstOrDefault() - не работает, хотя логично выбирать Cart...
+                carttochange[0].AverageCost += pizza.Price;
+                carttochange[0].Pizzas.Add(pizza);
+                db.SaveChanges();
+            }
+        }
 
         public ActionResult About()
         {
