@@ -80,9 +80,6 @@
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.MVC5.3.3.0\lib\net45\Ninject.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -196,7 +193,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\TestArea\TestAreaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -209,21 +205,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807200620040_Added Purchase attributeS model.cs" />
-    <Compile Include="Migrations\201807200620040_Added Purchase attributeS model.Designer.cs">
-      <DependentUpon>201807200620040_Added Purchase attributeS model.cs</DependentUpon>
+    <Compile Include="Migrations\201807081015194_New_Models.cs" />
+    <Compile Include="Migrations\201807081015194_New_Models.Designer.cs">
+      <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807200642271_Added Pizza attributes model.cs" />
-    <Compile Include="Migrations\201807200642271_Added Pizza attributes model.Designer.cs">
-      <DependentUpon>201807200642271_Added Pizza attributes model.cs</DependentUpon>
+    <Compile Include="Migrations\201807090930371_AverageCost_Cart_to_double.cs" />
+    <Compile Include="Migrations\201807090930371_AverageCost_Cart_to_double.Designer.cs">
+      <DependentUpon>201807090930371_AverageCost_Cart_to_double.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807201150161_Change database model.cs" />
-    <Compile Include="Migrations\201807201150161_Change database model.Designer.cs">
-      <DependentUpon>201807201150161_Change database model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807231302037_Disable_Validations_For_Purchase.cs" />
-    <Compile Include="Migrations\201807231302037_Disable_Validations_For_Purchase.Designer.cs">
-      <DependentUpon>201807231302037_Disable_Validations_For_Purchase.cs</DependentUpon>
+    <Compile Include="Migrations\201807091457111_seed.cs" />
+    <Compile Include="Migrations\201807091457111_seed.Designer.cs">
+      <DependentUpon>201807091457111_seed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountView\AccountViewModels.cs" />
@@ -236,7 +228,6 @@
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Util\NinjectRegistrations.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -416,11 +407,9 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Areas\TestArea\Views\web.config" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="SalePizza.csproj.DotSettings" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2137,7 +2126,6 @@
     <Content Include="Scripts\myscripts\fonts\themify\SVG\zoom-in.svg" />
     <Content Include="Scripts\myscripts\fonts\themify\SVG\zoom-out.svg" />
     <Content Include="Scripts\myscripts\fonts\themify\themify-icons.css" />
-    <Content Include="Scripts\myscripts\modalwindow.js" />
     <Content Include="Scripts\myscripts\vendor\animate\animate.css" />
     <Content Include="Scripts\myscripts\vendor\animsition\css\animsition.css" />
     <Content Include="Scripts\myscripts\vendor\animsition\css\animsition.min.css" />
@@ -2352,13 +2340,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
-    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\TestArea\Controllers\" />
-    <Folder Include="Areas\TestArea\Models\" />
-    <Folder Include="Areas\TestArea\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2374,17 +2358,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807200620040_Added Purchase attributeS model.resx">
-      <DependentUpon>201807200620040_Added Purchase attributeS model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807081015194_New_Models.resx">
+      <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807200642271_Added Pizza attributes model.resx">
-      <DependentUpon>201807200642271_Added Pizza attributes model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807090930371_AverageCost_Cart_to_double.resx">
+      <DependentUpon>201807090930371_AverageCost_Cart_to_double.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807201150161_Change database model.resx">
-      <DependentUpon>201807201150161_Change database model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807231302037_Disable_Validations_For_Purchase.resx">
-      <DependentUpon>201807231302037_Disable_Validations_For_Purchase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807091457111_seed.resx">
+      <DependentUpon>201807091457111_seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

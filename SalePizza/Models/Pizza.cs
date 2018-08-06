@@ -25,6 +25,9 @@ namespace SalePizza.Models
             Purchases = new List<Purchase>();
             Carts = new List<Cart>();
         }
+
+       
+
     }
 
 }
