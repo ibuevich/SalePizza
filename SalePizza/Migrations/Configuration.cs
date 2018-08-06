@@ -9,7 +9,7 @@ namespace SalePizza.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(SalePizza.Models.PizzaContext context)

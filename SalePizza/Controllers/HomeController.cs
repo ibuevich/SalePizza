@@ -14,6 +14,13 @@ namespace SalePizza.Controllers
         // создаем контекст данных
         PizzaContext db = new PizzaContext();
 
+        //тестируемый репозиторий
+        IRepository repo;
+        public HomeController(IRepository r)
+        {
+            repo = r;
+        }
+
         public ActionResult Index()
         {
             // получаем из бд все объекты Pizza
@@ -21,7 +28,7 @@ namespace SalePizza.Controllers
             // передаем все объекты в динамическое свойство в ViewBag
             ViewBag.Pizzas = pizzas;
             // возвращаем представление
-            return View();
+            return View(repo.List());  /*return View();*/
         }
 
         [HttpGet]
