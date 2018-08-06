@@ -1,6 +1,7 @@
 ﻿@using System.Data.Entity
 @using Microsoft.AspNet.Identity
 @using SalePizza.Models
+@using System.Threading.Tasks;
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -28,9 +29,8 @@
         </thead>
 
         <tbody>
-            @{ int i = 1; }
-            @foreach (var b in 
-                ViewBag.Pizzas)
+            @{ int i = 1; }            
+            @foreach (var b in ViewBag.Pizzas)
             {
                 <tr>
                     <th scope="row">@i</th>

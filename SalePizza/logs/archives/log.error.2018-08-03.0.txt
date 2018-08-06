@@ -1,0 +1,3 @@
+2018-08-02 12:05:55.0844 SalePizza.MvcApplication.Application_Start Info: Application Start  RuntimeMethodInfo.UnsafeInvokeInternal => RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start
+2018-08-02 12:06:00.1228 SalePizza.MvcApplication.Init Info: Application Init  HttpApplication.InitSpecial => HttpApplication.RegisterEventSubscriptionsWithIIS => MvcApplication.Init
+2018-08-02 12:06:00.9032 SalePizza.MvcApplication.Init Info: Application Init  HttpApplicationFactory.GetNormalApplicationInstance => HttpApplication.InitInternal => MvcApplication.Init
