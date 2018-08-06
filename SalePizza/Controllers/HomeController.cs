@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Ninject;
 using NLog.LayoutRenderers;
 using SalePizza.Filters;
 
@@ -13,6 +14,13 @@ namespace SalePizza.Controllers
     {
         // создаем контекст данных
         PizzaContext db = new PizzaContext();
+        
+        //тестируемый репозиторий
+        IRepository repo;
+        public HomeController(IRepository r)
+        {
+            repo = r;
+        }
 
         public ActionResult Index()
         {
@@ -21,7 +29,7 @@ namespace SalePizza.Controllers
             // передаем все объекты в динамическое свойство в ViewBag
             ViewBag.Pizzas = pizzas;
             // возвращаем представление
-            return View();
+            /*return View(repo.List());*/  return View();
         }
 
         [HttpGet]
