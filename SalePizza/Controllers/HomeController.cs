@@ -29,7 +29,7 @@ namespace SalePizza.Controllers
             // передаем все объекты в динамическое свойство в ViewBag
             ViewBag.Pizzas = pizzas;
             // возвращаем представление
-            /*return View(repo.List());*/  return View();
+            return View(repo.List());  /*return View();*/
         }
 
         [HttpGet]
