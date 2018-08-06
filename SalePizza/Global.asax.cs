@@ -1,10 +1,10 @@
 ﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Ninject;
-using Ninject.Modules;
 using Ninject.Web.Mvc;
 using SalePizza.Util;
+using Ninject;
+using Ninject.Modules;
 
 namespace SalePizza
 {
@@ -20,6 +20,7 @@ namespace SalePizza
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
 
             //Внесение завиимостей ninject
             NinjectModule registrations = new NinjectRegistrations();

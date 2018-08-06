@@ -7,13 +7,13 @@ namespace SalePizza.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedPizzaattributesmodel : IMigrationMetadata
+    public sealed partial class New_life : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedPizzaattributesmodel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(New_life));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807200642271_Added Pizza attributes model"; }
+            get { return "201808061319544_New_life"; }
         }
         
         string IMigrationMetadata.Source
