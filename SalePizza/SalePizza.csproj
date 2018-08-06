@@ -217,22 +217,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807081015194_New_Models.cs" />
-    <Compile Include="Migrations\201807081015194_New_Models.Designer.cs">
-      <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807090930371_AverageCost_Cart_to_double.cs" />
-    <Compile Include="Migrations\201807090930371_AverageCost_Cart_to_double.Designer.cs">
-      <DependentUpon>201807090930371_AverageCost_Cart_to_double.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807091457111_seed.cs" />
-    <Compile Include="Migrations\201807091457111_seed.Designer.cs">
-      <DependentUpon>201807091457111_seed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808061128223_Before Dependency.cs" />
-    <Compile Include="Migrations\201808061128223_Before Dependency.Designer.cs">
-      <DependentUpon>201808061128223_Before Dependency.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountView\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -2360,6 +2344,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\TestArea\Controllers\" />
+    <Folder Include="Areas\TestArea\Models\" />
+    <Folder Include="Areas\TestArea\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2373,20 +2360,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807081015194_New_Models.resx">
-      <DependentUpon>201807081015194_New_Models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807090930371_AverageCost_Cart_to_double.resx">
-      <DependentUpon>201807090930371_AverageCost_Cart_to_double.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807091457111_seed.resx">
-      <DependentUpon>201807091457111_seed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808061128223_Before Dependency.resx">
-      <DependentUpon>201808061128223_Before Dependency.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
