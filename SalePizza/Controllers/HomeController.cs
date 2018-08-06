@@ -9,6 +9,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Ninject;
+using NLog.LayoutRenderers;
+using SalePizza.Filters;
 
 namespace SalePizza.Controllers
 {
@@ -16,13 +20,23 @@ namespace SalePizza.Controllers
     {
         // создаем контекст данных
         PizzaContext db = new PizzaContext();
-
-        //public ActionResult Index()
-        //{
-        //    IEnumerable<Pizza> pizzas = db.Pizzas;
-        //    ViewBag.Pizzas = pizzas;
-        //    return View();
-        //}
+        
+        //тестируемый репозиторий
+        IRepository repo;
+        public HomeController(IRepository r)
+        {
+            repo = r;
+        }
+        
+        public ActionResult Index()
+        {
+            // получаем из бд все объекты Pizza
+            IEnumerable<Pizza> pizzas = db.Pizzas;
+            // передаем все объекты в динамическое свойство в ViewBag
+            ViewBag.Pizzas = pizzas;
+            // возвращаем представление
+            /*return View(repo.List());*/  return View();
+        }
 
         // асинхронный метод
         public async Task<ActionResult> Index()
