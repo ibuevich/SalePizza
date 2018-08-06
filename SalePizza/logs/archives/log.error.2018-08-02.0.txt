@@ -1,0 +1,5 @@
+2018-07-24 00:17:55.9227 SalePizza.MvcApplication.Application_Start Info: Application Start  RuntimeMethodInfo.UnsafeInvokeInternal => RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start
+2018-07-24 00:18:01.6172 SalePizza.MvcApplication.Init Info: Application Init  HttpApplication.InitSpecial => HttpApplication.RegisterEventSubscriptionsWithIIS => MvcApplication.Init
+2018-07-24 00:18:02.7171 SalePizza.MvcApplication.Init Info: Application Init  HttpApplicationFactory.GetNormalApplicationInstance => HttpApplication.InitInternal => MvcApplication.Init
+2018-07-24 00:20:43.1276 SalePizza.MvcApplication.Application_Error Info: Application Error  RuntimeMethodInfo.UnsafeInvokeInternal => RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Error
+2018-07-24 00:29:11.9262 SalePizza.MvcApplication.Application_Error Info: Application Error  RuntimeMethodInfo.UnsafeInvokeInternal => RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Error
